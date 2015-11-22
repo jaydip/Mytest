@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>Login to Catalyst App</title>
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/css/login.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+        <div class="row">
+        <div class="col-md-4 col-md-offset-7">
+            <div class="panel panel-default">
+                <div class="panel-heading"> <strong class="">Login</strong>
+                </div>
+                <div class="panel-body">
+                [% IF error == 1 %]
+                <div class="alert alert-danger">
+                  <strong>Invalid User!</strong> Please Enter Valid User Details.
+                  </div>
+              [% END %]
+                    <form class="form-horizontal" role="form" method="post" action="/login/check" >
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Username</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="username" class="form-control" id="username" placeholder="User Name" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-sm-3 control-label">Password</label>
+                            <div class="col-sm-9">
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Password" required="">
+                            </div>
+                        </div>
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn btn-success btn-sm">Sign in</button>
+                                <button type="reset" class="btn btn-default btn-sm">Reset</button>
+                                <!--<input type="submit" name="submit" value="Submit" />-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                    <div class="panel-footer">Not Joined? <a href="/" class="">Joined here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src="/static/javascript/jquery.min.js"></script>
+<script type='text/javascript' src="/static/javascript//bootstrap.min.js"></script>
+    </body>
+</html>

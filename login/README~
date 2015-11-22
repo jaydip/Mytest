@@ -1,0 +1,7 @@
+This is simple Login demo made with catalyst.
+it use DBIX;
+Database Configuration also it is there
+Db Configuration Can change it from login.conf and DB.pm file 
+run query from logi.sql
+
+Run script/login_server.pl -r -d to test the application.
